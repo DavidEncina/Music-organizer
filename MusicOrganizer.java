@@ -16,7 +16,7 @@ public class MusicOrganizer
      */
     public MusicOrganizer()
     {
-        files = new ArrayList<String>();
+        files = new ArrayList<>();
     }
     
     /**
@@ -57,6 +57,19 @@ public class MusicOrganizer
     {
         if(index >= 0 && index < files.size()) {
             files.remove(index);
+        }
+    }
+    
+    /**
+     * Se introduce un numero y comprueba que si es un indice valido para el atributo files. 
+     * Si el parametro no es valido muestra un error por pantalla e indica el rango valido.
+     */
+    public void checkIndex(int index)
+    {
+        if(index >=0 && index < files.size()) {            
+        }
+        else {
+            System.out.println("El parametro introducido no es valido. Debe estar entre 0 y " + (files.size() - 1));
         }
     }
 }
